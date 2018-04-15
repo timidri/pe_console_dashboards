@@ -1,15 +1,10 @@
 
 # pe_console_dashboards
 
-Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/pdk/latest/pdk_generating_modules.html .
+This (WIP) module installs a fully functioning EK (Elastic + Kibana) stack onto a system classified with 
+the class pe_console_dashboards.
 
-The README template below provides a starting point with details about what information to include in your README.
-
-
-
-
-
-
+It is intended to be used alongside with ipcrm-elk_report and should ultimately offer an easy way to install Kibana dashboards augmenting features of the PE console.
 
 #### Table of Contents
 

@@ -6,7 +6,26 @@
   "license": "Apache-2.0",
   "source": "",
   "dependencies": [
-
+    {
+      "name": "elastic-elasticsearch",
+      "version_requirement": ">= 6.2.2 < 7.0.0"
+    },
+    {
+      "name": "elastic-kibana",
+      "version_requirement": ">= 6.0.1 < 7.0.0"
+    },
+    {
+      "name": "puppetlabs-java",
+      "version_requirement": ">= 2.4.0 < 3.0.0"
+    },
+    {
+      "name": "richardc-datacat",
+      "version_requirement": ">= 0.6.2 < 1.0.0"
+    },
+    {
+      "name": "ipcrm-elk_report",
+      "version_requirement": ">= 0.1.0 < 1.0.0"
+    }
   ],
   "operatingsystem_support": [
     {

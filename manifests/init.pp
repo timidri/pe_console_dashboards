@@ -7,6 +7,9 @@
 # @example
 #   include pe_console_dashboards
 class pe_console_dashboards {
+
+#TODO parametrize
+
   include ::java
 
   class { 'elasticsearch':
