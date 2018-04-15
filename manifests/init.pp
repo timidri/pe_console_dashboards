@@ -23,4 +23,11 @@ class pe_console_dashboards {
       'server.host' => '0.0.0.0',
     }
   }
+
+  firewall { '100 allow port 8080 access':
+    dport  => 8080,
+    proto  => tcp,
+    action => accept,
+  }
+
 }
