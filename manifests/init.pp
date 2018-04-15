@@ -10,7 +10,12 @@ class pe_console_dashboards {
   include ::java
   include ::elasticsearch
 
-  elasticsearch::instance { 'es-01': }
+  elasticsearch::instance { 'es-01':
+    jvm_options => [
+    '-Xms400M',
+    '-Xmx400M'
+    ]
+  }
 
   class { '::kibana':
     config => {
