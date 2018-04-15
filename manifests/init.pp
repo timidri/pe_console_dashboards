@@ -18,7 +18,10 @@ class pe_console_dashboards {
     jvm_options => [
       '-Xms400M',
       '-Xmx400M'
-    ]
+    ],
+    config      => {
+      'network.host' => '0.0.0.0',
+    }
   }
 
   class { '::kibana':
