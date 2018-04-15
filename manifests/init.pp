@@ -7,11 +7,12 @@
 # @example
 #   include pe_console_dashboards
 class pe_console_dashboards {
-  include elasticsearch
+  include ::java
+  include ::elasticsearch
 
   elasticsearch::instance { 'es-01': }
 
-  class { 'kibana':
+  class { '::kibana':
     config => {
       'server.port' => '8080',
     }
