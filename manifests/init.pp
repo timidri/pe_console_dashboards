@@ -8,7 +8,11 @@
 #   include pe_console_dashboards
 class pe_console_dashboards {
   include ::java
-  include ::elasticsearch
+
+  class { 'elasticsearch':
+    api_host => '0.0.0.0',
+    api_port => 9200,
+  }
 
   elasticsearch::instance { 'es-01':
     jvm_options => [
@@ -26,6 +30,12 @@ class pe_console_dashboards {
 
   firewall { '100 allow port 8080 access':
     dport  => 8080,
+    proto  => tcp,
+    action => accept,
+  }
+
+  firewall { '100 allow port 9200 access':
+    dport  => 9200,
     proto  => tcp,
     action => accept,
   }
