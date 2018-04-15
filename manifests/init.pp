@@ -8,6 +8,12 @@
 #   include pe_console_dashboards
 class pe_console_dashboards {
   include elasticsearch
-  include kibana
+
   elasticsearch::instance { 'es-01': }
+
+  class { 'kibana':
+    config => {
+      'server.port' => '8080',
+    }
+  }
 }
