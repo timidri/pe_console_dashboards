@@ -12,14 +12,15 @@ class pe_console_dashboards {
 
   elasticsearch::instance { 'es-01':
     jvm_options => [
-    '-Xms400M',
-    '-Xmx400M'
+      '-Xms400M',
+      '-Xmx400M'
     ]
   }
 
   class { '::kibana':
     config => {
       'server.port' => '8080',
+      'server.host' => '0.0.0.0',
     }
   }
 }
